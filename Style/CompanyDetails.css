@@ -1,0 +1,28 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+#CompanyD {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#CompanyD>h1 {
+    text-align: center;
+    color: blue;
+    text-transform: uppercase;
+}
+
+#CompanyD>input {
+    /* width: 90%; */
+    height: 30px;
+    border-radius: 8px;
+    padding: 7px 10px;
+    margin: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

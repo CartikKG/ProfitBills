@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.heading1{
+    color: #238aff;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#profitBills-signUp{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 30%;
+    border-radius: 13px;
+    margin: auto;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+
+#profitBills-signUp-form{
+    display: grid;
+    margin: auto;
+    /* border: 1px solid black; */
+    padding: 1%;
+    font-size: 1.3rem;
+
+}
+
+.form-input{
+    font-size: 1.1rem;
+    padding: 1% 0%;
+    margin-bottom: 3%;
+    /* margin-bottom: %; */
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    color: gray;
+}
+
+.form-input:focus{
+    border-bottom:1px solid skyblue;
+    color: rgb(37, 14, 59);
+}
+
+.form-input::placeholder{
+    font-size:large;
+}
+
+.form-label{
+    color: #238aff;
+    
+}
+
+.form-submit{
+    padding: 2%;
+    width: 40%;
+    margin: auto;
+    border: none;
+    background-color: #a34ccc;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    outline: none;
+    /* border-radius: 8px; */
+}
+.form-submit:hover{
+    background-color: #850fbb;
+}
+
+.validationIcon{
+    width: 18px;
+    padding-top: 2px;
+    height: 18px;
+    font-size: 15px;
+    text-align: center;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    margin: auto;
+}
+
+#profitBills-validation-display{
+    margin: 5% 0%;
+    display: grid;
+    gap: 2% 1%;
+    /* width: fit-content; */
+    grid-template-columns: 8% 92%;
+    justify-content: center;
+    align-items: center;
+}

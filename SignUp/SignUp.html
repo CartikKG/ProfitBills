@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfitBills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Catamaran&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./SignUp.css">
+
+</head>
+<body>
+    
+    <div id="profitBills-signUp">
+
+        <h1 class="heading1">SignUp</h1>
+
+        <form id="profitBills-signUp-form">
+
+            <label for="form-first-name" class="form-label">First Name</label>
+            <input type="text" id="form-first-name" class="form-input" required placeholder="Enter First Name">
+
+            <label for="form-last-name" class="form-label">Last Name</label>
+            <input type="text" id="form-last-name" class="form-input" placeholder="Enter Last Name">
+
+            <label for="form-email" class="form-label">Email</label>
+            <input type="email" id="form-email" class="form-input" required  placeholder="Enter Email">
+
+            <label for="form-password" class="form-label">Password</label>
+            <input type="password" id="form-password" class="form-input" minlength="8" required placeholder="Enter Password">
+
+            <label for="form-confirm-password" class="form-label">Confirm Password</label>
+            <input type="password" id="form-confirm-password" class="form-input" minlength="8" required placeholder="Enter Confirm Password">
+
+            <input type="submit" value="Create Account" id="form-submit" class="form-submit">
+
+        </form>
+
+        <div id="profitBills-validation-display">
+
+            <i class="fa-solid fa-xmark validationIcon" id="eightCharValidateIcon"></i>
+            <p class="sentense">Minimum 8 Character</p>
+            <i class="fa-solid fa-xmark validationIcon" id="lowerCharValidateIcon"></i>
+            <p class="sentense">Minimum 1 LowerCase Character</p>
+            <i class="fa-solid fa-xmark validationIcon" id="upperCharValidateIcon"></i>
+            <p class="sentense">Minimum 1 UpperCase Character</p>
+            <i class="fa-solid fa-xmark validationIcon" id="specialCharValidateIcon"></i>
+            <p class="sentense">Minimum 1 Special Character(@ , $ , _)</p>
+            <i class="fa-solid fa-xmark validationIcon" id="numberCharValidateIcon"></i>
+            <p class="sentense">Minimum 1 Number</p>
+            <i class="fa-solid fa-xmark validationIcon" id="matchedCharValidateIcon"></i>
+            <p class="sentense">Password Matched</p>
+
+            
+
+
+        </div>
+        
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./SignUp.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/a103610109.js" crossorigin="anonymous"></script>
+</body>
+</html>

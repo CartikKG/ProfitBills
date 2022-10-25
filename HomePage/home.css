@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+#home-body {
+  display: flex;
+}
+#navbar {
+  padding: 25px;
+  border: 4px solid black;
+}
+#navbar-menuBar {
+  font-size: 20px;
+}
+#navbar-menuBar:hover {
+  cursor: pointer;
+}
+#home-sideBar {
+  width: 300px;
+  border: 2px solid red;
+  /* transition: width 3000ms; */
+  /* padding-left: 30px; */
+  /* padding-top: 30px; */
+}
+#home-mainContent {
+  width: 75%;
+  border: 2px solid green;
+}
+#home-rightContent {
+  width: 25%;
+  border: 2px solid blue;
+}
+#sidebar-InnerIcons {
+  width: 20px;
+  height: 20px;
+  /* border: 1px solid gray; */
+  text-align: center;
+  color: rgb(92, 92, 92);
+}
+#home-topSideBar {
+  /* margin-bottom: 40px; */
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding: 15px 0px 40px 30px;
+  /* border: 2px solid gray; */
+}
+#home-middleSideBar {
+  /* margin-bottom: 40px; */
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding: 15px 0px 40px 30px;
+  /* border: 2px solid gray; */
+}
+#home-bottomSideBar {
+  /* margin-bottom: 40px; */
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding: 15px 0px 40px 30px;
+  /* border: 2px solid gray; */
+}
+#sidebar-OuterIcons {
+  width: 20px;
+  height: 20px;
+  color: #3d67ff;
+  margin-right: 7px;
+  /* border: 2px solid grey; */
+}
+#sidebar-firstBox{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+#sidebar-voucherBox{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+#sidebar-settingBox {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+#home-sideBar a {
+  font-size: 13px;
+  text-decoration: none;
+  color: rgb(68, 68, 68);
+}
+#home-sideBar h2 {
+  text-transform: uppercase;
+  color: #3d67ff;
+  letter-spacing: 1.4px;
+}
+#sidebar-settingsIcon {
+  margin-right: 7px;
+  font-size: 14px;
+  color: #3d67ff;
+  /* width: px; */
+}
+#sidebar-settings {
+  text-transform: uppercase;
+  color: #3d67ff;
+  letter-spacing: 1.4px;
+}

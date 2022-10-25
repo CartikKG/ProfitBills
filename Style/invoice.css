@@ -31,7 +31,7 @@ form {
 }
 
 form>div {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
 }
@@ -59,7 +59,7 @@ form>div>span>input[type="address"] {
 
 form>span {
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 form>span>input {
@@ -103,7 +103,7 @@ table input {
     padding: 3px 0px;
 }
 
-.table-responsive table th {
+table th {
     width: 20px;
     background-color: rgb(17, 0, 145);
     color: white;

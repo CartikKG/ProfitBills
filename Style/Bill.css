@@ -101,7 +101,7 @@ a {
     padding: .62503rem
 }
 
-table th {
+.table-responsive table th {
     background-color: #2196f3;
     color: white;
 }

@@ -3,12 +3,23 @@
     padding: 0%;
 }
 
+body {
+    background-color: rgb(227, 227, 227);
+}
+
 #navbar {
     background-color: rgb(0, 170, 255);
     height: 60px;
 }
 
+#maindiv {
+    width: 90%;
+    margin: auto;
+    /* border: 0.2px solid rgb(0, 0, 0); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
 
+}
 
 form {
     width: 90%;
@@ -19,9 +30,36 @@ form {
     flex-direction: column;
 }
 
+form>div {
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+form>div input[type="date"] {
+    width: 100%;
+    /* position: relative;
+    right: 0%; */
+    padding: 5px 0px;
+}
+
+form>div>span input[type="text"] {
+    font-size: 17px;
+    padding: 2px 10px;
+}
+
+form>div>span>input[type="address"] {
+    font-size: 17px;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-top: 10px;
+    /* border: 2px solid red; */
+}
+
 form>span {
     width: 100%;
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 
 form>span>input {
@@ -39,8 +77,10 @@ form>span>input {
 form>h1 {
     text-align: center;
     text-transform: uppercase;
+    text-decoration: underline;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(9, 9, 149);
+    margin-bottom: 20px;
 }
 
 table {
@@ -48,6 +88,13 @@ table {
     margin: auto;
     /* align-items: center; */
     align-self: center;
+    border-collapse: collapse;
+}
+
+table select {
+    width: 100%;
+    font-size: 17px;
+    padding: 3px 0px;
 }
 
 table input {
@@ -56,7 +103,7 @@ table input {
     padding: 3px 0px;
 }
 
-table th {
+.table-responsive table th {
     width: 20px;
     background-color: rgb(17, 0, 145);
     color: white;

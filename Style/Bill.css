@@ -5,12 +5,14 @@ body {
     font-weight: 400;
     line-height: 1.5385;
     color: #333;
-    text-align: left;
-    background-color: #eee
+    /* text-align: left; */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../img/ProfitBills-clear.png);
+
 }
 
 .mt-50 {
-    margin-top: 50px
+    margin-top: 0px
 }
 
 .mb-50 {
@@ -97,4 +99,9 @@ a {
     display: block;
     line-height: 1;
     padding: .62503rem
+}
+
+table th {
+    background-color: #2196f3;
+    color: white;
 }

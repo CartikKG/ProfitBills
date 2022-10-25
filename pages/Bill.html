@@ -16,17 +16,18 @@
   </head>
 
   <body>
-    <div class="container d-flex justify-content-center mt-50 mb-50">
+    <div
+      style="width: 50%"
+      class="container d-flex justify-content-center mt-50 mb-50"
+    >
       <div class="row">
-        <div class="col-md-12 text-right mb-3">
-          <button class="btn btn-primary" id="download">download pdf</button>
-        </div>
         <div class="col-md-12">
           <div class="card" id="invoice">
-            <div class="card-header bg-transparent header-elements-inline">
-              <h6 class="card-title text-primary">Sale invoice</h6>
-            </div>
+            <!-- <div class="card-header bg-transparent header-elements-inline">
+            
+            </div> -->
             <div class="card-body">
+              <h6 class="card-title text-primary">Invoice</h6>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="mb-4 pull-left">
@@ -50,12 +51,12 @@
                             >March 15, 2020</span
                           >
                         </li>
-                        <li>
+                        <!-- <li>
                           Due date:
                           <span class="font-weight-semibold"
                             >March 30, 2020</span
                           >
-                        </li>
+                        </li> -->
                       </ul>
                     </div>
                   </div>
@@ -85,18 +86,18 @@
                   <div class="d-flex flex-wrap wmin-md-400">
                     <ul class="list list-unstyled mb-0 text-left">
                       <li>
-                        <h5 class="my-2">Total Due:</h5>
+                        <h5 class="my-2">.</h5>
                       </li>
                       <li>Bank name:</li>
                       <li>Country:</li>
                       <li>City:</li>
                       <li>Address:</li>
-                      <li>IBAN:</li>
-                      <li>SWIFT code:</li>
+                      <li>A/c No:</li>
+                      <li>IFSC code:</li>
                     </ul>
                     <ul class="list list-unstyled text-right mb-0 ml-auto">
                       <li>
-                        <h5 class="font-weight-semibold my-2">$1,090</h5>
+                        <h5 class="font-weight-semibold my-2">.</h5>
                       </li>
                       <li>
                         <span class="font-weight-semibold">Hong Kong Bank</span>
@@ -121,11 +122,11 @@
                   <tr>
                     <th>Description</th>
                     <th>Rate</th>
-                    <th>Hours</th>
+                    <th>GST</th>
                     <th>Total</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="mainallitems">
                   <tr>
                     <td>
                       <h6 class="mb-0">Arts and design template</h6>
@@ -192,26 +193,30 @@
                       </tbody>
                     </table>
                   </div>
-                  <div class="text-right mt-3">
+                  <!-- <div class="text-right mt-3">
                     <button type="button" class="btn btn-primary">
                       <b><i class="fa fa-paper-plane-o mr-1"></i></b> Send
                       invoice
                     </button>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
             <div class="card-footer">
-              <span class="text-muted"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.Duis aute irure dolor in reprehenderit</span
-              >
+              <span class="text-muted"></span>
+                * Goods once sold will not be taken back * All Juridiction to * All Payment in Advance
+                Current District Only
+              </span>
             </div>
           </div>
+        </div>
+        <div
+          style="display: flex; justify-content: center"
+          class="col-md-12 text-right mb-3"
+        >
+          <button class="btn btn-primary" id="download">
+            Download & Print
+          </button>
         </div>
       </div>
     </div>

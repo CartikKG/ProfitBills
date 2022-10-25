@@ -9,47 +9,74 @@
   </head>
   <body>
     <div id="navbar"></div>
-    <form action="">
-      <h1>Generate Invoice</h1>
-      <span>
-        <!-- <h4>Customer Name / Company</h4> -->
-        <!-- <br /> -->
-        <input
-          type="text"
-          name=""
-          id="customerName"
-          placeholder="Customer Name / Company"
-        />
-        <input
-          type="text"
-          name=""
-          id="customerMob"
-          placeholder="Mobile number "
-        />
-      </span>
-      <span>
-        <input type="text" name="" id="customerAddress" placeholder="Address" />
-        <input type="text" name="" id="customerGSTIN" placeholder="GSTIN"
-      /></span>
-      <input type="submit" value="Save" />
-    </form>
-    <table>
-      <tr>
-        <th>Particular</th>
-        <th>QTY</th>
-        <th>Amount</th>
-        <th>Rate</th>
-        <th>Total</th>
-      </tr>
-      <tr>
-        <td><input type="text" /></td>
-        <td><input type="text" /></td>
-        <td><input type="text" /></td>
-        <td><input type="text" /></td>
-        <td><input type="text" /></td>
-      </tr>
-      <td><button>Add Another Item</button></td>
-    </table>
+    <div id="maindiv">
+      <form action="">
+        <h1>Generate Invoice</h1>
+        <div>
+          <span>
+            <input
+              type="text"
+              name=""
+              id="customerName"
+              placeholder="Customer Name / Company"
+            />
+            <input
+              type="text"
+              name=""
+              id="customerMob"
+              placeholder="Mobile number "
+            />
+            <!-- <input
+            type="text"
+            name=""
+          
+          
+          /> -->
+            <input type="text" name="" id="customerGSTIN" placeholder="GSTIN" />
+            <br />
+            <input type="address" id="customerAddress" placeholder="Address" />
+          </span>
+
+          <span>
+            Invoice No. 1 <br />
+            <input type="date" name="" id="" />
+          </span>
+        </div>
+        <!-- <span> </span> -->
+        <!-- <input type="submit" value="Save" /> -->
+      </form>
+      <table>
+        <tr>
+          <th style="width: 3px">S.No</th>
+          <th style="width: 10em">Description</th>
+          <th style="width: 1em">QTY</th>
+          <th style="width: 1em">Rate</th>
+          <th style="width: 1em">GST</th>
+          <th style="width: 1em">Total</th>
+        </tr>
+        <tr>
+          <td style="text-align: center; border: 0.5px solid black">1</td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td>
+            <select name="" id="">
+              <option value="None"><b>None</b></option>
+              <option value="0">GST@0%</option>
+              <option value="2.5">GST@2.5%</option>
+              <option value="5">GST@5%</option>
+              <option value="9">GST@9%</option>
+              <option value="12">GST@12%</option>
+              <option value="18">GST@18%</option>
+              <option value="28">GST@28%</option>
+              <option value="Exempted">Exempted</option>
+            </select>
+          </td>
+          <td><input type="text" /></td>
+        </tr>
+        <td><button>Add Row</button></td>
+      </table>
+    </div>
     <div id="footer"></div>
   </body>
   <script src="../Scripts/invoice.js"></script>

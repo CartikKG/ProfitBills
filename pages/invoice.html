@@ -8,21 +8,29 @@
     <title>ProfitBills | Invoice</title>
   </head>
   <body>
+    <div id="navbar"></div>
     <form action="">
-      <input
-        type="text"
-        name=""
-        id="customerName"
-        placeholder="Customer Name / Company"
-      />
-      <input type="text" name="" id="customerAddress" placeholder="Address" />
-      <input
-        type="text"
-        name=""
-        id="customerMob"
-        placeholder="Mobile number "
-      />
-      <input type="text" name="" id="customerGSTIN" placeholder="GSTIN" />
+      <h1>Generate Invoice</h1>
+      <span>
+        <!-- <h4>Customer Name / Company</h4> -->
+        <!-- <br /> -->
+        <input
+          type="text"
+          name=""
+          id="customerName"
+          placeholder="Customer Name / Company"
+        />
+        <input
+          type="text"
+          name=""
+          id="customerMob"
+          placeholder="Mobile number "
+        />
+      </span>
+      <span>
+        <input type="text" name="" id="customerAddress" placeholder="Address" />
+        <input type="text" name="" id="customerGSTIN" placeholder="GSTIN"
+      /></span>
       <input type="submit" value="Save" />
     </form>
     <table>
@@ -42,6 +50,7 @@
       </tr>
       <td><button>Add Another Item</button></td>
     </table>
+    <div id="footer"></div>
   </body>
   <script src="../Scripts/invoice.js"></script>
 </html>

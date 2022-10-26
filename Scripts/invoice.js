@@ -1,4 +1,4 @@
-let count = 1;
+let count = 0;
 document.getElementById("maindiv").addEventListener("click", (e) => {
   if (e.target.id == "addrow") {
     let tr = document.createElement("tr");

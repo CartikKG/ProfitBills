@@ -35,74 +35,32 @@
               id="customerMob"
               placeholder="Mobile number "
             />
-            <!-- <input
-            type="text"
-            name=""
-          
-          
-          /> -->
             <input type="text" name="" id="customerGSTIN" placeholder="GSTIN" />
             <br />
             <input type="address" id="customerAddress" placeholder="Address" />
           </span>
 
           <span>
-            Invoice No. 1 <br />
+            Invoice No. <span id="invoicecount">1</span> <br />
             <input type="date" name="" id="" />
           </span>
         </div>
-        <!-- <span> </span> -->
-        <!-- <input type="submit" value="Save" /> -->
       </form>
       <table>
         <tr>
-          <th style="width: 3px">S.No</th>
+          <th style="width: 3px">S. No</th>
           <th style="width: 10em">Description</th>
           <th style="width: 1em">QTY</th>
           <th style="width: 1em">Rate</th>
           <th style="width: 1em">GST</th>
           <th style="width: 1em">Total</th>
-          <th style="width: 3px">Delete</th>
+          <th style="width: 3px">DL -T</th>
         </tr>
 
-        <tr>
-          <tbody>
-            <!-- <td style="text-align: center; border: 0.5px solid black">1</td>
-          <td><input type="text" /></td>
-          <td><input type="text" /></td>
-          <td><input type="text" /></td>
-          <td>
-            <select name="" id="">
-              <option value="None"><b>None</b></option>
-              <option value="0">GST@0%</option>
-              <option value="2.5">GST@2.5%</option>
-              <option value="5">GST@5%</option>
-              <option value="9">GST@9%</option>
-              <option value="12">GST@12%</option>
-              <option value="18">GST@18%</option>
-              <option value="28">GST@28%</option>
-              <option value="Exempted">Exempted</option>
-            </select>
-          </td>
-
-          <td><input type="text" /></td>
-
-          <td
-            style="
-              background-color: red;
-              color: rgb(253, 253, 253);
-              text-align: center;
-              cursor: pointer;
-              border-bottom: 1px solid black;
-            "
-            id="deleterow"
-          >
-            <i class="fa-solid fa-trash"></i>
-          </td>
-        </tr> -->
-          </tbody>
-          <button id="addrow">Add Row</button>
-        </tr>
+        <!-- <tr> -->
+        <tbody></tbody>
+        <button id="addrow">Add Row</button>
+        <!-- </tr> -->
       </table>
 
       <span id="generate">Generate</span>

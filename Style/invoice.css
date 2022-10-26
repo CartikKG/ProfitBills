@@ -112,6 +112,11 @@ table th {
     border: none;
 }
 
+tbody td input {
+    text-align: center;
+
+}
+
 #addrow {
     position: relative;
     left: 88%;

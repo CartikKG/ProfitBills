@@ -3,7 +3,7 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
   if (e.target.id == "addrow") {
     let tr = document.createElement("tr");
     tr.innerHTML = `<td style="text-align: center; border: 0.5px solid black">${++count}</td>
-  <td><input type="text" /></td>
+  <td ><input type="text" /></td>
   <td><input type="text" /></td>
   <td><input type="text" /></td>
   <td>
@@ -36,9 +36,11 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
     document.querySelector("tbody").append(tr);
   } else if (e.target.id == "generate") {
     // localStorage
-    console.log("OK");
+    let all = document.querySelectorAll("tbody>tr")[0];
+    console.log(all);
   } else if (e.target.id == "deleterow") {
     // localStorage
+    count--;
     console.log("OKRE");
     console.log(e.target.parentNode.remove());
   }

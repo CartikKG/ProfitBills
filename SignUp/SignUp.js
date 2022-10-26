@@ -1,5 +1,5 @@
 import { nanoid } from './node_modules/nanoid/nanoid.js';
-
+// import Cryptr from "./node_modules/cryptr/index.js";
 
 
 class profitBillsUser {
@@ -26,6 +26,12 @@ class profitBillsUser {
 
 
 const signUpFunction =async()=>{
+
+    // let text = "Ankit";
+    // let encrypted = Cryptr.encrypt(text);
+    // console.log(encrypted);
+    // let decrypted =Cryptr.decrypt(encrypted);
+    // console.log(decrypted);
 
     event.preventDefault();
 
@@ -54,10 +60,6 @@ const signUpFunction =async()=>{
         if(password.charCodeAt(i)==64||password.charCodeAt(i)==95||password.charCodeAt(i)==36){
             specialChar=true;
         }
-
-
-
-
     }
 
     if(!specialChar||!lowerChar||!upperChar||!numberChar||password!=confirmPassword){
@@ -65,16 +67,16 @@ const signUpFunction =async()=>{
         return;
     }
 
-    const apiURL = `https://profitbills.herokuapp.com/profitbills`;
+    const apiURL = `https://getpantry.cloud/apiv1/pantry/b8b33398-4e21-40c3-810a-09fc9692bd8b/basket/`;
     
     
     
     // Checking User is Available or not in Data.
     try{
-
+        const apiURL =`${apiURL}`
         let res = await fetch(apiURL+`?email=${email}`);
         let data = await res.json();
-        // console.log(data);
+        console.log(data);
         if(data.length>0){
             alert("Email Already Registered");
             return;
@@ -89,18 +91,19 @@ const signUpFunction =async()=>{
 
 
     //Posting User Data to Server
-    
-    let newUser = new profitBillsUser(nanoid(),fname,lname,email,password);
+    const newUserId = nanoid();
+    let newUser = new profitBillsUser(newUserId,fname,lname,email,password);
 
 
     try{
 
-        let postreq = await fetch(apiURL,{
+        let postreq = await fetch(`${apiURL}`,{
             "method":"POST",
             "body":JSON.stringify(newUser),
             "headers":{
                 "Content-Type":"application/json"
-            }
+            },
+            "redirect":"follow"
         })
 
         let postresponse = await postreq.json();

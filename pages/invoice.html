@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/60b736368c.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="shortcut icon"
       href="../img/ProfitBills_favicon-removebg-preview.png"
@@ -58,8 +62,11 @@
           <th style="width: 1em">Rate</th>
           <th style="width: 1em">GST</th>
           <th style="width: 1em">Total</th>
+          <th style="width: 3px">Delete</th>
         </tr>
+
         <tr>
+          <tbody>
           <td style="text-align: center; border: 0.5px solid black">1</td>
           <td><input type="text" /></td>
           <td><input type="text" /></td>
@@ -77,12 +84,31 @@
               <option value="Exempted">Exempted</option>
             </select>
           </td>
+
           <td><input type="text" /></td>
+
+          <td
+            style="
+              background-color: red;
+              color: rgb(253, 253, 253);
+              text-align: center;
+              cursor: pointer;
+              border-bottom: 1px solid black;
+            "
+            id="deleterow"
+          >
+            <i class="fa-solid fa-trash"></i>
+          </td>
         </tr>
-        <td><button>Add Row</button></td>
+      </tbody>
+        <button id="addrow">Add Row</button>
       </table>
+
+      <span id="generate">Generate</span>
     </div>
+
     <div id="footer"></div>
   </body>
   <script src="../Scripts/invoice.js"></script>
 </html>
+<table></table>

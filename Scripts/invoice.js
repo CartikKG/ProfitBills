@@ -5,9 +5,9 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
     tr.innerHTML = `<td style="text-align: center; border: 0.5px solid black">${++count}</td>
   <td ><input type="text" /></td>
   <td><input type="text" id="qty" /></td>
-  <td><input type="text" id="rate" /></td>
+  <td><input type="text" id="rate" oninput="total()" /></td>
   <td>
-    <select name="" id="gstrate">
+    <select name="" onchange="total()" id="gstrate">
       <option value="0"><b>None</b></option>
       <option value="0">GST@0%</option>
       <option value="2.5">GST@2.5%</option>
@@ -34,22 +34,6 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
 </td>
   `;
     document.querySelector("tbody").append(tr);
-    document.getElementById("rate").addEventListener("input", () => {
-      let rate = Number(document.getElementById("rate").value);
-      let qty = Number(document.getElementById("qty").value);
-      let total = rate * qty;
-      let gst = Number(document.getElementById("gstrate").value);
-      let percent = (total / 100) * gst;
-      document.getElementById("total").value = (total + percent).toFixed(2);
-    });
-    document.getElementById("gstrate").addEventListener("change", () => {
-      let rate = Number(document.getElementById("rate").value);
-      let qty = Number(document.getElementById("qty").value);
-      let total = rate * qty;
-      let gst = Number(document.getElementById("gstrate").value);
-      let percent = (total / 100) * gst;
-      document.getElementById("total").value = (total + percent).toFixed(2);
-    });
   } else if (e.target.id == "generate") {
     let all = document.querySelectorAll("tbody>tr");
     let compnay = document.querySelectorAll("form>div>span")[0];
@@ -95,3 +79,13 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
     e.target.parentNode.remove();
   }
 });
+
+function total() {
+  let all = event.target.parentNode.parentNode.children;
+  let rate = Number(all[3].children[0].value);
+  let qty = Number(all[2].children[0].value);
+  let total = rate * qty;
+  let gst = Number(all[4].children[0].value);
+  let percent = (total / 100) * gst;
+  all[5].children[0].value = (total + percent).toFixed(2);
+}

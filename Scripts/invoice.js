@@ -4,11 +4,11 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
     let tr = document.createElement("tr");
     tr.innerHTML = `<td style="text-align: center; border: 0.5px solid black">${++count}</td>
   <td ><input type="text" /></td>
-  <td><input type="text" /></td>
-  <td><input type="text" /></td>
+  <td><input type="text" id="qty" /></td>
+  <td><input type="text" id="rate" /></td>
   <td>
-    <select name="" id="">
-      <option value="None"><b>None</b></option>
+    <select name="" id="gstrate">
+      <option value="0"><b>None</b></option>
       <option value="0">GST@0%</option>
       <option value="2.5">GST@2.5%</option>
       <option value="5">GST@5%</option>
@@ -16,10 +16,10 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
       <option value="12">GST@12%</option>
       <option value="18">GST@18%</option>
       <option value="28">GST@28%</option>
-      <option value="Exempted">Exempted</option>
+      <option value="0">Exempted</option>
     </select>
   </td>
-  <td><input type="text" /></td>
+  <td><input type="text" id="total"  /></td>
   <td
   style="
     background-color: red;
@@ -34,6 +34,22 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
 </td>
   `;
     document.querySelector("tbody").append(tr);
+    document.getElementById("rate").addEventListener("input", () => {
+      let rate = Number(document.getElementById("rate").value);
+      let qty = Number(document.getElementById("qty").value);
+      let total = rate * qty;
+      let gst = Number(document.getElementById("gstrate").value);
+      let percent = (total / 100) * gst;
+      document.getElementById("total").value = (total + percent).toFixed(2);
+    });
+    document.getElementById("gstrate").addEventListener("change", () => {
+      let rate = Number(document.getElementById("rate").value);
+      let qty = Number(document.getElementById("qty").value);
+      let total = rate * qty;
+      let gst = Number(document.getElementById("gstrate").value);
+      let percent = (total / 100) * gst;
+      document.getElementById("total").value = (total + percent).toFixed(2);
+    });
   } else if (e.target.id == "generate") {
     let all = document.querySelectorAll("tbody>tr");
     let compnay = document.querySelectorAll("form>div>span")[0];

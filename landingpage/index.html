@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Noto+Sans+JP:wght@500&family=Poppins:wght@500&family=Roboto:wght@100;300&family=Secular+One&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Noto+Sans+JP:wght@500&family=Poppins:wght@500&family=Roboto:wght@100;300&family=Secular+One&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0%;
+        }
+
+        #navbarlandingpage {
+            /* margin-top: 5px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            left: 0;
+
+
+            height: 60px;
+            background-color: white;
+            /* border: 2px black solid; */
+        }
+
+
+        #navv {
+            /* border: 2px black solid; */
+            width: 82%;
+            height: 60px;
+            background-color: white;
+
+            display: flex;
+
+        }
+
+        #navsection1 {
+            /* border: 2px black solid; */
+            width: 37%;
+            display: flex;
+            align-items: center;
+        }
+
+        #navsection1 div {
+            width: 35%;
+            /* border: 2px black solid; */
+        }
+
+        #navsection1 img {
+            width: 100%;
+        }
+
+        #navsection2 {
+            width: 63%;
+            display: flex;
+            justify-content: space-between;
+            /* column-gap: 5%; */
+            align-items: center;
+            font-size: 16px;
+            font-weight: 400 !important;
+            font-family: sans-serif;
+        }
+
+        #navsection2 a {
+            color: rgb(157, 157, 157);
+            text-decoration: none;
+            padding: 15px;
+        }
+
+
+        #navsection2 a:hover {
+            color: #337ab7;
+        }
+
+        #banner {
+            width: 100%;
+            display: none;
+            /* height: 3000px; */
+            /* border: 1px black solid; */
+        }
+
+        #banner img {
+            width: 100%;
+        }
+
+        #banner2 {
+            margin-top: 0;
+            /* border: 1px black solid; */
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 2.5%;
+            padding-bottom: 10%;
+            background-color: white;
+        }
+
+        #banner2>div {
+            /* border: 1px black solid; */
+            /* height: 400px; */
+            width: 39%;
+        }
+
+        #banner2 h1 {
+            font-size: 54px;
+            /* font-family: 'Poppins', sans-serif; */
+            font-family: 'Secular One', sans-serif;
+            color: rgb(49, 66, 89);
+        }
+
+        #banner2 p {
+            font-family: sans-serif;
+            /* font-family: 'Mukta', sans-serif; */
+            font-size: 16px;
+            width: 78%;
+            color: rgb(120, 120, 120);
+        }
+
+        #dowmload {
+            width: 51%;
+            height: 30px;
+            /* margin: auto; */
+            margin-top: 9%;
+            color: white;
+            display: flex;
+            border-radius: 9px;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Secular One', sans-serif;
+            background-color: rgb(238, 62, 60);
+            padding: 2%;
+        }
+
+        #banner2 img {
+            width: 80%;
+        }
+
+        #greybackground {
+            height: 280px;
+            /* border: 1px black solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(250, 250, 250);
+        }
+
+        #childgrey {
+            width: 70%;
+            column-gap: 1%;
+            margin: auto;
+            /* border: 1px black solid; */
+            display: grid;
+            grid-template-columns: repeat(5, 19%);
+        }
+
+        #childgrey>div {
+            /* height: 200px; */
+            /* display: flex; */
+            /* align-items: center; */
+            flex-direction: column;
+            justify-content: center;
+            /* width: 20%; */
+            /* border: 1px black solid; */
+        }
+
+        /* #childgrey img { */
+        /* width: 30%; */
+        /* height: 60%; */
+        /* } */
+
+        #firstp {
+            font-size: 25px;
+            /* font-weight: lighter; */
+            color: rgb(49, 66, 89);
+            /* font-family: 'Mukta', sans-serif; */
+            /* font-family: 'Noto Sans JP', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            /* font-family: 'Roboto', sans-serif; */
+            /* font-family: 'Secular One', sans-serif; */
+            /* font-family: 'Source Sans Pro', sans-serif; */
+        }
+
+        #firstp span {
+            color: rgb(237, 26, 59);
+            /* font-size: 30px; */
+            padding-top: 3%;
+        }
+
+        #secondp {
+            padding-top: 3%;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbarlandingpage">
+        <div id="navv">
+            <div id="navsection1">
+                <div><img src="https://vyaparwebsiteimages.vypcdn.in/logo1.svg" /></div>
+            </div>
+            <div id="navsection2">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">Pricing</a></div>
+                <div><a href="#">About Us</a></div>
+                <div><a href="#">Desktop</a></div>
+                <div><a href="#">Blogs</a></div>
+                <div><a href="#">Careers</a></div>
+                <div><a href="#">FAQ</a></div>
+                <div><a href="#">Partner with us</a></div>
+                <div><a href="#">Login</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="banner">
+        <img
+            src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/sale-banner/Sz2FVwy3ShoISjsVkDLLP3TdXgzyxFyrA4nh3Tbc.jpeg" />
+    </div>
+
+    <div id="banner2">
+        <div>
+            <h1>
+                GST Billing Software in India for Small Businesses
+            </h1>
+            <p>Manage your business professionally with Vyapar. Using the best software for your billing, inventory &
+                accounting needs. Be a part of 1 Cr+ SMEs in India who trust Vyapar.</p>
+            <div id="dowmload"><span>Download for Desktop</span></div>
+        </div>
+        <div>
+
+            <img
+                src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/vyapar-hero.webp" />
+        </div>
+    </div>
+
+    <div id="greybackground">
+        <div id="childgrey">
+            <div>
+                <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/happy_customer.webp"
+                    width="56" height="56" />
+                <p id="firstp">
+                    1 Crore<span>+</span>
+                </p>
+                <p id="secondp">happy customers</p>
+            </div>
+            <div>
+                <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/phone_icon.webp"
+                    width="34" height="56" />
+                <p id="firstp">
+                    FREE
+                </p>
+                <p id="secondp">Android Mobile App</p>
+
+            </div>
+            <div>
+                <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/gplay_store.webp"
+                    width="50" height="56" />
+                <p id="firstp">
+                    Rated 4.7/<span>5</span>
+                </p>
+                <p id="secondp">on Google Play Store</p>
+
+            </div>
+            <div>
+                <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/multi_device.webp"
+                    width="61" height="56" />
+                <p id="firstp">
+                    Multi-<span>Device</span>
+                </p>
+                <p id="secondp">Use together on Mobile/Desktop</p>
+
+            </div>
+            <div>
+                <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/multi_user.webp"
+                    width="56" height="56" />
+                <p id="firstp">
+                    Multi-<span>User</span>
+                </p>
+                <p id="secondp">User Management Feature</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

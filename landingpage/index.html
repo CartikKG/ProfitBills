@@ -108,7 +108,7 @@
             justify-content: center;
             align-items: center;
             column-gap: 2.5%;
-            padding-bottom: 10%;
+            padding-bottom: 5%;
             background-color: white;
         }
 
@@ -209,6 +209,59 @@
             font-size: 14px;
             font-family: 'Poppins', sans-serif;
         }
+
+        #hidecontainer>div {
+            /* border: 1px black solid; */
+            width: 50%;
+            /* height: 400px; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hidecontainer {
+            padding-top: 5%;
+            display: flex;
+            margin: auto;
+            width: 84%;
+            column-gap: 1%;
+            /* border: 1px black solid; */
+        }
+
+        #hidecontainer h2 {
+            font-size: 44px;
+            /* font-family: 'Poppins', sans-serif; */
+            font-family: 'Secular One', sans-serif;
+            color: rgb(49, 66, 89);
+            width: 80%;
+            /* margin: auto; */
+        }
+
+        #hidecontainer p {
+            width: 80%;
+            /* margin: auto; */
+            font-size: 18px;
+            font-family: sans-serif;
+            text-align: left;
+            letter-spacing: 0;
+            color: #314259;
+            opacity: 1;
+
+            height: 64px;
+            overflow: hidden;
+
+
+        }
+
+        #hidecontainer #red {
+            color: rgb(237, 26, 59);
+            font-size: 18px;
+            padding-top: 1%;
+            width: 80%;
+            /* margin: auto; */
+            /* border: 1px black solid; */
+        }
     </style>
 </head>
 
@@ -301,6 +354,67 @@
             </div>
         </div>
     </div>
+
+    <div id="hidecontainer">
+        <div>
+            <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/make_gst_bills_and_share_with_your_customers.webp?v=0.1"
+                width="430" height="461" />
+        </div>
+        <div>
+            <h2>Create GST Bills for customers and share them online</h2>
+            <p id="hideee">Vyapar billing software helps you set up a professional brand identity with useful GST
+                billing features.
+                You can use Vyapar accounting and billing app to create invoices. It helps you comply with Goods and
+                Service Tax law in India. <br><br>
+                Vyapar app makes accounting error-free. It helps ensure data security for your business. In a few steps,
+                invoice formats in the Vyapar app help create GST invoices. You can use the Vyapar app in both online
+                and offline modes. So, using the app makes it easier for an SME to comply with the best accounting
+                practices. It makes the bookkeeping process seamless for businesses.
+                <br>
+                <br>
+                Using our user-friendly invoicing software to comply with GST norms. Vyapar billing software comes with
+                variety of useful billing solutions. You can create invoices for your customers in few steps. Further,
+                you can share them with customers using WhatsApp, email, or print methods. You can print them use your
+                printer in A4, A5, 2, and 3 inches variations.
+                <br><br>
+                Unlike most accounting softwares, Vyapar enables you to create invoices within minutes. The best part is
+                that your won’t require hours of rigorous training as it is an easy process. In the app, you can choose
+                from 10+ GST invoice and billing formats to create professional and unique bills. (It includes the
+                design based on tally accounting software).
+                <br><br>
+                Vyapar is the best free GST invoicing software. It comes with various useful billing and accounting
+                features. Using the app makes business management hassle-free for SMEs. With completely customised
+                GST-compliant invoices, your business can stand out among competitors.
+                <br><br>
+                The best billing software makes the billing process easier for business owners. To do so, Vyapar comes
+                with a dedicated Android app and Windows software. The basic features required for everyday accounting
+                are free for Android mobile users. A business owners only have to pay for premium features as a yearly
+                subscription.
+                <br><br>
+                Numerous useful features are available in Windows desktop software. Every business can access them for
+                free during their 15-day trial. So, every business can try out the features before purchasing the
+                subscription. It helps SMEs understand how the app benefits them before paying.
+            </p>
+            <p id="red">+Read more</p>
+        </div>
+    </div>
 </body>
 
 </html>
+<script>
+    var b = false;
+    document.getElementById("red").addEventListener("click", () => {
+        console.log("hi")
+        if (b == true) {
+            document.getElementById("hideee").style.height = "64px";
+            b = false;
+            document.getElementById("red").innerText = "+Read more";
+        } else {
+            document.getElementById("hideee").style.height = "fit-content";
+            b = true;
+            document.getElementById("red").innerText = "-Read less";
+        }
+
+    })
+
+</script>

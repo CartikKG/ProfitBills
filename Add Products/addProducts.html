@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Catamaran&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./addProducts.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <img src="./src/logo.png" alt="" id="logo">
+        <ul>
+            <li><a href="#">DashBoard</a></li>
+            <li><a href="#">Option1</a></li>
+            <li><a href="#">Option2</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div id="addProductsBody">
+
+        <form id="addProductsForm">
+            <div class="inputContent">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" required placeholder="Enter Product Name">
+            </div>
+
+            <div class="inputContent">
+                <label for="categoryName">Category</label>
+                <input type="text"  id="categoryName" required placeholder="Enter Category">
+            </div>
+                
+            <div class="inputContent">
+                <label for="openingStock">Opening Stock</label>
+                <input type="number"  id="openingStock" placeholder="Enter Opening Stock">
+            </div>
+            <br>
+            <hr>
+
+            <div class="inputContent">
+                
+                <textarea  id="productDescription" cols="30" rows="10" placeholder="Enter Product Description if Any"></textarea>
+            </div>
+
+            <input type="submit" id="addProductSubmit" value="Add Products">
+                
+
+        </form>
+</div>
+</body>
+</html>

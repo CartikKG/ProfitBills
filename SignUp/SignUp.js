@@ -67,14 +67,20 @@ const signUpFunction =async()=>{
         return;
     }
 
-    const apiURL = `https://getpantry.cloud/apiv1/pantry/b8b33398-4e21-40c3-810a-09fc9692bd8b/basket/`;
+    const apiURL = `https://https://profitbills-b8ea.restdb.io/rest/profitbills`;
     
     
     
     // Checking User is Available or not in Data.
     try{
         const apiURL =`${apiURL}`
-        let res = await fetch(apiURL+`?email=${email}`);
+        let res = await fetch(apiURL+`?email=${email}`,{
+            "method":"GET",
+            "headers": { 
+                'cache-control': 'no-cache',
+                'x-apikey': 'f3b55b3ab3bc98ce0889f1c1e970d7c6eb831' 
+            } 
+        });
         let data = await res.json();
         console.log(data);
         if(data.length>0){
@@ -98,12 +104,13 @@ const signUpFunction =async()=>{
     try{
 
         let postreq = await fetch(`${apiURL}`,{
-            "method":"POST",
-            "body":JSON.stringify(newUser),
-            "headers":{
-                "Content-Type":"application/json"
-            },
-            "redirect":"follow"
+            method: 'POST',
+            data: JSON.stringify(newUser),
+            headers: {
+                'cache-control': 'no-cache',
+                'x-apikey': 'f3b55b3ab3bc98ce0889f1c1e970d7c6eb831',
+                'Content-Type': 'application/json' 
+            }
         })
 
         let postresponse = await postreq.json();

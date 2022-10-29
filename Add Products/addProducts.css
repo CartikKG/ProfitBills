@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding: 0% 2%;
+}
+
+#navbar > #logo{
+    width: 20%;
+}
+
+#navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    /* border: 1px solid black; */
+}
+
+
+#navbar ul a{
+    text-decoration: none;
+    color: blue;
+    font-size: 22px;
+    font-weight: 600;
+    
+    
+}
+#navbar ul a:hover{
+    
+    color: blueviolet;
+    
+    
+    
+}
+#navbar ul li{
+    list-style: none;
+    color: blue;
+
+    
+
+}
+
+
+#addProductsBody{
+    margin-top: 3%;
+}
+
+
+#addProductsBody form{
+    display: grid;
+    font-size: 22px;
+    width: 100%;
+    margin: auto;
+    padding: 0% 2%;
+    color: blueviolet;
+    font-weight: 600
+}
+
+
+.inputContent{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    margin-bottom:1%;
+    align-items: center;
+    width: 100%;
+}
+
+.inputContent input{
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    background-color: #d5dfe6;
+    border: none;
+    
+}
+.inputContent textarea{
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+    /* width: 100%; */
+    /* border: 1px solid black; */
+    height: 250px;
+    width: 97vw;
+    margin-top: 2%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    outline: nones;
+}
+
+.inputContent textarea::placeholder{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+
+
+.inputContent input::placeholder{
+   font-size: larger;
+}
+
+
+#addProductSubmit{
+    padding: 1%;
+    width: 50%;
+    margin: auto;
+    border: none;
+    background-color: blueviolet;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    outline: none;
+}

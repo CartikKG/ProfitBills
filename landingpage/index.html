@@ -781,75 +781,75 @@
 
         <div id="parentscroll">
             <div id="scroll">
-                <div>
+                <div id="scrollchild1">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Send%20Estimate.webp?v=0.1"
                         width="45" height="45" />
                     <span>Send Estimate & Quation</span>
                 </div>
-                <div>
+                <div id="scrollchild2">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Track%20order.webp?v=0.1"
                         width="45" height="45" />
                     <span>Track Orders</span>
                 </div>
-                <div>
+                <div id="scrollchild3">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Bank%20Account.webp?v=0.1"
                         width="45" height="45" />
                     <span>Choose Themes</span>
                 </div>
-                <div>
+                <div id="scrollchild4">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Record%20expenses.webp?v=0.1"
                         width="45" height="45" />
                     <span>Record Expenses</span>
                 </div>
-                <div>
+                <div id="scrollchild5">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Receivable%20and%20payable.webp?v=0.1"
                         width="45" height="45" />
                     <span>Receivables and Payable</span>
                 </div>
-                <div>
+                <div id="scrollchild6">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Delivery%20Challan.webp?v=0.1"
                         width="45" height="45" />
                     <span>Delivery Challan</span>
                 </div>
-                <div>
+                <div id="scrollchild7">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Bank%20Account.webp?v=0.1"
                         width="45" height="45" />
                     <span>Bank Accounts</span>
                 </div>
-                <div>
+                <div id="scrollchild8">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Business%20Reports.webp?v=0.1"
                         width="45" height="45" />
                     <span>Business Reports
                     </span>
                 </div>
-                <div>
+                <div id="scrollchild9">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/GST%20Invoicing.webp?v=0.1"
                         width="45" height="45" />
                     <span>GST Invoicing / Billing
                     </span>
                 </div>
-                <div>
+                <div id="scrollchild10">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Automatic%20data%20backup.webp?v=0.1"
                         width="45" height="45" />
                     <span>Automatic data backup
                     </span>
                 </div>
-                <div>
+                <div id="scrollchild11">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Regular%20thermal%20printer.webp?v=0.1"
                         width="45" height="45" />
                     <span>Regular/Thermal Printer
                     </span>
                 </div>
-                <div>
+                <div id="scrollchild12">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Online%20store.webp?v=0.1"
                         width="45" height="45" />
                     <span>Online Store</span>
                 </div>
             </div>
             <div id="detailss">
-                <h3>Send Estimate & Quation</h3>
+                <h3 id="detailsheading">Send Estimate & Quation</h3>
 
-                <p>
+                <p id="fulldetail">
                     Using our free billing software, you can easily create useful documents. It includes quotations,
                     estimates, and accurate GST invoices. Inbuilt features in the GST billing app allow you to send
                     quotes/estimates to customers anytime. You can send them directly through WhatsApp, email, SMS, or
@@ -871,6 +871,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
@@ -938,6 +939,109 @@
             document.getElementById("red4").innerText = "- Read less";
         }
 
+    })
+
+    document.getElementById("scrollchild1").addEventListener("click", () => {
+        document.getElementById("detailsheading").innerText = "Send Estimate & Quation";
+        document.getElementById("fulldetail").innerHTML = ` Using our free billing software, you can easily create useful documents. It includes quotations,
+                    estimates, and accurate GST invoices. Inbuilt features in the GST billing app allow you to send
+                    quotes/estimates to customers anytime. You can send them directly through WhatsApp, email, SMS, or
+                    by printing.
+                    <br><br>
+                    Vyapar billing software provides professional outlook with instant estimates and quotes. The Vyapar
+                    app helps automate most processes. It makes the quotes and estimates error-free. Additionally, you
+                    can set up a due date for tracking invoices seamlessly.
+                    <br><br>
+                    Further, you can convert your estimates and quotations into sale invoices anytime. All you need is
+                    the Vyapar software for billing and its done in a few clicks. Vyapar free billing software offers
+                    the business a complete option for quickly saving more time getting instant quotes. Using the
+                    accounting software, you can manage your business with higher productivity.
+                    <br><br>
+                    The billing app brings a professionalism for your valued customers to attract them back. Choosing
+                    advanced Software for GST billing is one of the best investments for your business. Our Billing
+                    Software helps simplifies estimates and quotations.`;
+    })
+
+
+    document.getElementById("scrollchild2").addEventListener("click", () => {
+        document.getElementById("detailsheading").innerText = "Track Orders";
+        document.getElementById("fulldetail").innerHTML = ` Using our advanced GST Compliant Software for Billing makes creating sales or purchase orders easier. It helps set
+    up a due date for tracking order seamlessly. With this GST Accounting and Billing Software, we get an auto stock
+    adjustment. It help ensure the availability of inventory items.
+<br><br>
+    Having tracking features is pretty helpful for fulfilling the orders timely. Tracking avoid unnecessary losses. You
+    can save time with tracking and use it to perform other day to day tasks. It enables better customer satisfaction.
+    You can attach tax invoice with order and track if payment is due using the app.
+    <br><br>
+    Using our GST billing app, it is easier to improve your purchase/sale order formats. As Vyapar App provides various
+    options, including Word, PDF, and Excel. Using our GST invoicing software, you can save labour cost and efforts. You
+    can do save time by converting orders to sale/purchase invoices using automation.
+    <br><br>
+    You can track open, close, and overdue orders using our free billing app. It makes it a perfect choice for
+    businesses. Using these features makes the entire tracking process seamless for businesses. In short, it helps
+    improve the performance of employees.`;
+    })
+
+
+    document.getElementById("scrollchild3").addEventListener("click", () => {
+        document.getElementById("detailsheading").innerText = "Choose Themes";
+        document.getElementById("fulldetail").innerHTML = ` Maintaining and sharing professional invoices with your clients can improve your brand’s Identity. The GST Billing
+    App has two invoice themes for thermal printers. Also, it has twelve invoice themes for regular printers.
+<br><br>
+    With this GST invoice software, you can quickly improve the look of your invoice Using available customisation
+    options is seamless. You can neatly prepare the invoice for your client. Business bills generated can better impress
+    a client.
+    <br><br>
+    The Billing App for GST is the best option for your accounting inventory. It is very easy to handle. Choose from the
+    best GST invoice formats to meet your business requirements. Most businesses choose our free billing software to
+    help present a professional image. It is an ideal way to build a positive brand image.
+    <br><br>
+    This free billing app is efficient for quickly gaining the highest invoice standard. It provides multiple theme
+    options for thermal and regular printers. GST Invoicing Software is suitable, and all themes are fully customisable.
+    A business can use it for all commercial businesses. The list includes retailers, pharmaceutical businesses, gyms,
+    restaurants, and many other businesses.`;
+    })
+
+
+    document.getElementById("scrollchild4").addEventListener("click", () => {
+        document.getElementById("detailsheading").innerText = "Record Expenses";
+        document.getElementById("fulldetail").innerHTML = `  Tracking and recording all expenses in the business is important for accounting and tax filing. It is easier to
+    follow the money spent and create an accurate report with the GST billing software.
+    <br><br>
+    Our free billing app is an efficient option for recording expenses. Businesses can easily optimise their business
+    expenditure to save more money. With our free GST software for billing, you record both GST and non-GST expenses.
+    <br><br>
+    Further, Vyapar billing solutions comes with various benefits over competitors. It help you reduce costs and
+    maximise sales. The free billing software is an efficient option for quickly recording outstanding expenses. It
+    helps in tracking them in future too.
+    <br><br>
+    Our free mobile app is suitable for growing businesses. It helps keep their finances in check. By recording the
+    expenses using GST software, the company can optimise the expenditure. It helps save money. Moreover, keeping track
+    of costs will help build better strategies. It will result in better profitability of business.`;
+    })
+
+    document.getElementById("scrollchild5").addEventListener("click", () => {
+
+
+        document.getElementById("detailsheading").innerText = "Receivables and Payable";
+        document.getElementById("fulldetail").innerHTML = `A professional,free billing and accounting software lets users keep all the transaction details and track business
+    cash flow seamlessly. Now you have a better way of keeping your transaction details safe.
+<br><br>
+    Free GST Invoicing Software allows you to track party-wise receivables and payables. Using the business dashboard in
+    the GST mobile app, you can track the money you ‘have to receive’ and the money you ‘need to pay in the Vyapar app.
+    <br><br>
+    You can easily track observe who didn’t pay you back. You can set payment reminders to collect dues from these
+    customers on time. You can send free payment reminders to any party via WhatsApp, SMS, and email. You can provide
+    all type of online payment solutions to collect dues seamlessly. Further, it will allow you to save time for your
+    day to day tasks.
+    <br><br>
+    Also, with the bulk payment reminder feature, you can save time by sending payment reminders to all your customers
+    in bulk at once. The GST Billing and invoicing software perform automated calculations. It help track receivables
+    and payables seamlessly.
+    <br><br>
+    Using the cash flow management system by Vyapar enables you to avoid taking too much debt and revisit your business
+    plan as it indicates an early sign of issues in cash flow. Further, you can also use the Vyapar billing app to
+    perform party-to-party balance transfers.`;
     })
 
 </script>

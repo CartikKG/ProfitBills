@@ -1,4 +1,4 @@
-import { nanoid } from './node_modules/nanoid/nanoid.js';
+import { nanoid } from 'nanoid/nanoid.js';
 // import Cryptr from "./node_modules/cryptr/index.js";
 
 
@@ -7,10 +7,9 @@ class profitBillsUser {
     constructor(id,firstName,LastName,email,password){
         this.id=id;
         this.firstName=firstName;
-        this.lastName=LastName;
+        this.LastName=LastName;
         this.email=email;
         this.password=password;
-       
     }
 
 
@@ -68,17 +67,23 @@ const signUpFunction =async()=>{
         return;
     }
 
-    let apiURL = `https://api.sheetson.com/v2/sheets/profitbills?`;
-    let apiKey =  `8xkjbrVNda6OB53ZyhDVPjTqhDX8KfFveM_GtbmKwQ9FtDbvPCAL-Gtm8wM`;
-    let spreadsheetId =`1K3yp6JSNSyaYpzxzioPceVgh0uNlA7KBmI_X_OYvr6s`;
+    const apiURL = `https://https://profitbills-b8ea.restdb.io/rest/profitbills`;
+    
+    
     
     // Checking User is Available or not in Data.
     try{
-        
-        let res = await fetch(apiURL+`apiKey=${apiKey}&spreadsheetId=${spreadsheetId}&where={"email": "${email}"}`);
+        const apiURL =`${apiURL}`
+        let res = await fetch(apiURL+`?email=${email}`,{
+            "method":"GET",
+            "headers": { 
+                'cache-control': 'no-cache',
+                'x-apikey': 'f3b55b3ab3bc98ce0889f1c1e970d7c6eb831' 
+            } 
+        });
         let data = await res.json();
         console.log(data);
-        if(data.results.length>0){
+        if(data.length>0){
             alert("Email Already Registered");
             return;
         }
@@ -92,17 +97,19 @@ const signUpFunction =async()=>{
 
 
     //Posting User Data to Server
-    let newUserId = nanoid();
-    let newUser = new profitBillsUser(newUserId,fname,lname,email,password)
+    const newUserId = nanoid();
+    let newUser = new profitBillsUser(newUserId,fname,lname,email,password);
 
 
     try{
 
-        let postreq = await fetch(apiURL+`apiKey=${apiKey}&spreadsheetId=${spreadsheetId}`,{
+        let postreq = await fetch(`${apiURL}`,{
             method: 'POST',
-            body: JSON.stringify(newUser),
+            data: JSON.stringify(newUser),
             headers: {
-                "Content-Type": "application/json"
+                'cache-control': 'no-cache',
+                'x-apikey': 'f3b55b3ab3bc98ce0889f1c1e970d7c6eb831',
+                'Content-Type': 'application/json' 
             }
         })
 

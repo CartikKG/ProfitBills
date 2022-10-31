@@ -19,7 +19,7 @@ body{
 }
 
 #profitBills-signUp-body{
-    margin-top: 1%;
+    margin-top: 5%;
 }
 #profitBills-validation-display>p{
     
@@ -29,7 +29,7 @@ body{
     color: white;
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1%;
+    margin-bottom: 10%;
     font-weight: 600;
 }
 
@@ -58,7 +58,7 @@ body{
 .form-input{
     font-size: 1.1rem;
     padding: 3% 3%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     /* margin-bottom: %; */
     background-color: #d5dfe6;
     outline: none;
@@ -175,7 +175,6 @@ body{
 
 
 
-
 #navbar{
     display: flex;
     justify-content: space-between;
@@ -189,7 +188,7 @@ body{
     width: 22%;
     margin-top: 1%;
     /* color: white; */
-    filter:contrast(10%);
+    /* filter:contrast(10%); */
 }
 
 #navbar ul{
@@ -223,7 +222,6 @@ body{
     
 
 }
-
 
 
 

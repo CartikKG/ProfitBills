@@ -4,12 +4,13 @@ import { nanoid } from './node_modules/nanoid/nanoid.js';
 
 class profitBillsUser {
 
-    constructor(id,firstName,LastName,email,password){
-        this.id=id;
+    constructor(firstName,LastName,email,password){
+        
         this.firstName=firstName;
         this.lastName=LastName;
         this.email=email;
         this.password=password;
+        this.invoices=[];
        
     }
 
@@ -68,19 +69,27 @@ const signUpFunction =async()=>{
         return;
     }
 
-    let apiURL = `https://api.sheetson.com/v2/sheets/profitbills?`;
-    let apiKey =  `8xkjbrVNda6OB53ZyhDVPjTqhDX8KfFveM_GtbmKwQ9FtDbvPCAL-Gtm8wM`;
-    let spreadsheetId =`1K3yp6JSNSyaYpzxzioPceVgh0uNlA7KBmI_X_OYvr6s`;
+    let apiURL = `https://profitbills-b8ea.restdb.io/rest/profitbills`;
+    let apiKey =  `6360f3cee9a77f5984220583	`;
+    
     
     // Checking User is Available or not in Data.
     try{
         
-        let res = await fetch(apiURL+`apiKey=${apiKey}&spreadsheetId=${spreadsheetId}&where={"email": "${email}"}`);
+        let res = await fetch(apiURL,{
+            "method": "GET",
+            "headers":{
+                'cache-control': 'no-cache',
+                "x-apikey":apiKey
+            }
+        });
         let data = await res.json();
         console.log(data);
-        if(data.results.length>0){
-            alert("Email Already Registered");
-            return;
+        for(let i=0;i<data.length;i++){
+            if(data[i].email==email){
+                alert("Already Registered");
+                return;
+            }
         }
 
 
@@ -92,33 +101,37 @@ const signUpFunction =async()=>{
 
 
     //Posting User Data to Server
-    let newUserId = nanoid();
-    let newUser = new profitBillsUser(newUserId,fname,lname,email,password)
-
+    
+    let newUser = new profitBillsUser(fname,lname,email,password)
 
     try{
-
-        let postreq = await fetch(apiURL+`apiKey=${apiKey}&spreadsheetId=${spreadsheetId}`,{
-            method: 'POST',
-            body: JSON.stringify(newUser),
-            headers: {
-                "Content-Type": "application/json"
+        
+        let res = await fetch(apiURL,{
+            method: "POST",
+            body:JSON.stringify(newUser),
+            
+            headers:{
+                "content-type":"application/json",
+                'cache-control': 'no-cache',
+                "x-apikey":apiKey
             }
-        })
-
-        let postresponse = await postreq.json();
-        console.log(postresponse);
+        });
+        let data = await res.json();
+        console.log(data);
+        for(let i=0;i<data.length;i++){
+            if(data[i].email==email){
+                alert("Already Registered");
+                return;
+            }
+        }
 
 
 
     }
     catch(err){
-
         console.log(err);
-
-
     }
-
+   
 
     document.getElementById("form-first-name").value="";
     document.getElementById("form-last-name").value="";

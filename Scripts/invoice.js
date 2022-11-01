@@ -1,3 +1,17 @@
+
+
+let url = `https://api.sheetson.com/v2/sheets/profitbills?`;
+let apiKey = `8xkjbrVNda6OB53ZyhDVPjTqhDX8KfFveM_GtbmKwQ9FtDbvPCAL-Gtm8wM`;
+let sheetId = `1K3yp6JSNSyaYpzxzioPceVgh0uNlA7KBmI_X_OYvr6s`;
+
+
+
+
+
+
+
+
+
 let count = 0;
 document.getElementById("maindiv").addEventListener("click", (e) => {
   if (e.target.id == "addrow") {
@@ -51,10 +65,10 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
     let GSTIN = compnay.children[2].value;
     let Address = compnay.children[4].value;
     let date = c1.children[2].value;
-    let no = document.querySelector("#invoicecount").innerHTML;
-    let temp = new Bill_to(Name, Mob, GSTIN, Address, date, no);
+    let no = document.querySelector("#invoicecount").value;
+    // let temp = new Bill_to(Name, Mob, GSTIN, Address, date, no);
 
-    console.log(temp);
+    // console.log(temp);
 
     function BillDetails(a, b, c, d, e, f) {
       this.no = a;
@@ -64,7 +78,9 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
       this.gst = e;
       this.total = f;
     }
+    let productsData = [];
     for (let i = 1; i < all.length; i++) {
+
       let sno = all[i].cells[0].innerHTML;
       let des = all[i].cells[1].children[0].value;
       let qty = all[i].cells[2].children[0].value;
@@ -72,8 +88,27 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
       let gst = all[i].cells[4].children[0].value;
       let total = all[i].cells[5].children[0].value;
       let temp = new BillDetails(sno, des, qty, rate, gst, total);
-      console.log(temp);
+      productsData.push(temp);
+
     }
+
+    let billDetail= {
+      name:Name,
+      mob:Mob,
+      gstin:GSTIN,
+      address:Address,
+      date:date,
+      number:no,
+      productsData:productsData
+    }
+
+    postInvoice(billDetail);
+
+
+
+
+
+
   } else if (e.target.id == "deleterow") {
     count--;
     e.target.parentNode.remove();
@@ -88,4 +123,59 @@ function total() {
   let gst = Number(all[4].children[0].value);
   let percent = (total / 100) * gst;
   all[5].children[0].value = (total + percent).toFixed(2);
+}
+
+
+
+
+const postInvoice =async(invoice)=>{
+  
+  let apiURL = `https://profitbills-b8ea.restdb.io/rest/profitbills`;
+  let apiKey =  `6360f3cee9a77f5984220583	`;
+  let loggedUser = localStorage.getItem("loggedUser");
+  
+  
+  //fetching data of Logged in user
+
+  try{
+        
+    let res = await fetch(apiURL+`/${loggedUser}`,{
+        "method": "GET",
+        "headers":{
+            'cache-control': 'no-cache',
+            "Content-Type": "application/json",
+            "x-apikey":apiKey
+        }
+    });
+    let data = await res.json();
+    
+    data.invoices.push(invoice);
+    delete data["_id"];
+    try{
+        
+      let res = await fetch(apiURL+`/${loggedUser}`,{
+          method: "PUT",
+          body:JSON.stringify(data),
+          headers:{
+              "content-type":"application/json",
+              'cache-control': 'no-cache',
+              "x-apikey":apiKey
+          }
+      });
+      let data1 = await res.json();
+      console.log(data1);
+  
+  
+  
+      }
+      catch(err){
+          console.log(err);
+      }
+
+
+
+}
+catch(err){
+    console.log(err);
+}
 }

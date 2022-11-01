@@ -6,26 +6,42 @@ const logInFunction =async()=>{
     let password = document.getElementById("form-password").value;
  
 
-    let apiURL = `https://api.sheetson.com/v2/sheets/profitbills?`;
-    let apiKey =  `8xkjbrVNda6OB53ZyhDVPjTqhDX8KfFveM_GtbmKwQ9FtDbvPCAL-Gtm8wM`;
-    let spreadsheetId =`1K3yp6JSNSyaYpzxzioPceVgh0uNlA7KBmI_X_OYvr6s`;
+    let apiURL = `https://profitbills-b8ea.restdb.io/rest/profitbills`;
+    let apiKey =  `6360f3cee9a77f5984220583	`;
     
     // Checking User is Available or not in Data.
     try{
         
-        let res = await fetch(apiURL+`apiKey=${apiKey}&spreadsheetId=${spreadsheetId}&where={"email": "${email}"}`);
+        let res = await fetch(apiURL,{
+            "method": "GET",
+            "headers":{
+                'cache-control': 'no-cache',
+                "x-apikey":apiKey
+            }
+        });
         let data = await res.json();
-        // console.log(data);
-        if(data.results.length>0){
-           if(data.results[0].password==password){
-            alert(`SucessFully Login ${data.results[0].firstName}`);
-           }
-           else{
-            alert("Wrong Password");
-           }
+        console.log(data);
+        let bool = false;
+        for(let i=0;i<data.length;i++){
+            if(data[i].email==email){
+                bool = true;
+                if(data[i].password==password){
+                    alert(`Sucessfully Login ${data[i].firstName}`);
+                    localStorage.setItem("loggedUser",data[i]["_id"]);
+                    
+                    
+
+                }
+                else{
+                    alert("Invalid Credentials");
+                }
+                break;
+            }
+           
         }
-        else{
-            alert("User Not Registered");
+
+        if(!bool){
+            alert("User doesn't Exist");
         }
 
 

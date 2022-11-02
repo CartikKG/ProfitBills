@@ -34,11 +34,14 @@
   /* padding-top: 30px; */
 }
 #home-mainContent {
-  width: 75%;
-  /* border: 2px solid green; */
+  /* border: 2px solid red; */
+  width: 100%;
+  /* margin: 0px 40px;
+  padding-top: 10px; */
+  /* border: 1px solid rgb(189, 189, 189); */
 }
 #home-rightContent {
-  width: 25%;
+  /* width: 25%; */
   /* border: 2px solid blue; */
 }
 #sidebar-InnerIcons {
@@ -115,6 +118,7 @@
 }
 #home-billingDetailsBox > h1 {
   color: rgb(48, 48, 48);
+  margin-bottom: 20px;
 }
 #home-billingDetails {
   /* border: 3px solid blue; */
@@ -123,7 +127,7 @@
 }
 #home-totalSale {
   border: 1px solid gray;
-  width: 40%;
+  width: 30%;
   background-color: #3351a9;
   color: white;
   letter-spacing: 2px;
@@ -143,6 +147,7 @@
   border-radius: 4px;
   float: right;
   transition: transform 300ms;
+  letter-spacing: 0.6px;
 }
 #home-totalSale > button:hover {
   cursor: pointer;
@@ -150,7 +155,7 @@
 }
 #home-leftOut {
   border: 1px solid gray;
-  width: 40%;
+  width: 30%;
   background-color: #3351a9;
   color: white;
   letter-spacing: 2px;
@@ -206,12 +211,12 @@
   right: 0px;
   bottom: 0px;
   width: 100%;
-  height: 25%;
+  /* height: 25%; */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
-  background-color: white;
+  background-color: rgb(223, 223, 223);
 }
 #home-showMoreHistory:hover {
   cursor: pointer;

@@ -1,0 +1,103 @@
+.carousel-cell {
+  width: 93%;
+  /* border: 2px solid black; */
+  height: 300px;
+  display: flex;
+  /* column-gap: 2%; */
+  /* margin: auto; */
+}
+
+.main-carousel {
+  width: 71%;
+  margin: auto;
+}
+
+#part1 {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 30%;
+  /* border: 2px solid rgb(40, 209, 24); */
+}
+#part1 img {
+  margin-top: 20px;
+}
+
+#part2 {
+  height: 300px;
+  width: 70%;
+  /* border: 2px solid rgb(223, 23, 23); */
+}
+#part2 #headingg {
+  margin-top: 15px;
+  font-family: "Secular One", sans-serif;
+  font-size: 22px;
+  color: rgb(49, 66, 89);
+}
+
+#headingg2 {
+  width: 90%;
+  line-height: 22px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+#middlep {
+  width: 57%;
+  margin: auto;
+  text-align: justify;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #333333;
+  line-height: 22px;
+}
+
+#divwhite {
+  height: 10px;
+}
+#acordioncontainers {
+  border: 2px red solid;
+  padding-bottom: 1%;
+  background-color: rgb(238, 238, 238);
+  height: fit-content;
+}
+#acordioncontainers > h2 {
+  font-family: "Secular One", sans-serif;
+  font-size: 44px;
+  color: rgb(49, 66, 89);
+  /* border: 1px rgb(27, 27, 30) solid; */
+  width: 100%;
+  text-align: center;
+
+  padding-top: 90px;
+}
+#accordionFlushExample {
+  border-radius: 10px;
+}
+
+.accordion-item {
+  border: 2px red solid;
+  /* padding-bottom: 1%; */
+  /* height: fit-content; */
+}
+
+#accordionFlushExample {
+  /* height: 100px; */
+
+  width: 80%;
+  margin: auto;
+}
+#accordionbuttonheight {
+  /* border: 2px red solid; */
+  /* border-radius: 8px; */
+  border-top-left-radius: 8px;
+  height: 75px;
+
+  font-size: 18px;
+  font-family: "Secular One", sans-serif;
+  color: rgb(49, 66, 89);
+}
+.accordion-body {
+  background-color: white;
+}

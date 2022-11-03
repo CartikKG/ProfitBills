@@ -11,11 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Noto+Sans+JP:wght@500&family=Poppins:wght@500&family=Roboto:wght@100;300&family=Secular+One&family=Source+Sans+Pro:wght@200&display=swap"
         rel="stylesheet">
-
-
+    <link rel="stylesheet" href="./landingpage.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Noto+Sans+JP:wght@500&family=Poppins:wght@500&family=Roboto:wght@100;300&family=Secular+One&family=Source+Sans+Pro:wght@200&display=swap"
         rel="stylesheet">
@@ -34,7 +36,7 @@
             top: 0;
             left: 0;
 
-
+            z-index: 8;
             height: 60px;
             background-color: white;
 
@@ -514,6 +516,24 @@
             padding-left: 2%;
             width: 85%;
         }
+
+        #crousalcontainer {
+            height: 700px;
+            /* border: 1px black solid; */
+            background-color: rgb(250, 250, 250);
+        }
+
+
+        #crousalcontainer h2 {
+            font-family: 'Secular One', sans-serif;
+            font-size: 44px;
+            color: rgb(49, 66, 89);
+            /* border: 1px rgb(27, 27, 30) solid; */
+            width: 100%;
+            text-align: center;
+
+            padding-top: 60px;
+        }
     </style>
 </head>
 
@@ -783,66 +803,66 @@
             <div id="scroll">
                 <div id="scrollchild1">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Send%20Estimate.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Send Estimate & Quation</span>
                 </div>
                 <div id="scrollchild2">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Track%20order.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Track Orders</span>
                 </div>
                 <div id="scrollchild3">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Bank%20Account.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Choose Themes</span>
                 </div>
                 <div id="scrollchild4">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Record%20expenses.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Record Expenses</span>
                 </div>
                 <div id="scrollchild5">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Receivable%20and%20payable.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Receivables and Payable</span>
                 </div>
                 <div id="scrollchild6">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Delivery%20Challan.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Delivery Challan</span>
                 </div>
                 <div id="scrollchild7">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Bank%20Account.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Bank Accounts</span>
                 </div>
                 <div id="scrollchild8">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Business%20Reports.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Business Reports
                     </span>
                 </div>
                 <div id="scrollchild9">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/GST%20Invoicing.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>GST Invoicing / Billing
                     </span>
                 </div>
                 <div id="scrollchild10">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Automatic%20data%20backup.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Automatic data backup
                     </span>
                 </div>
                 <div id="scrollchild11">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Regular%20thermal%20printer.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Regular/Thermal Printer
                     </span>
                 </div>
                 <div id="scrollchild12">
                     <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/features/Online%20store.webp?v=0.1"
-                        width="45" height="45" />
+                        width="fit-content" height="45" />
                     <span>Online Store</span>
                 </div>
             </div>
@@ -871,7 +891,213 @@
             </div>
         </div>
     </div>
+    <div id="divwhite"></div>
+    <div id="crousalcontainer">
+        <h2>Built for your Industry</h2>
+        <br><br>
+        <p id="middlep">Vyapar GST billing software and accounting tools have numerous features. Collectively, they help
+            businesses
+            across industries. Vyapar app is built to serve every industry. It is customisable to meet the requirement
+            of your business as per your unique business requirements. Some of the most popular industries use the
+            Vyapar GST accounting software. It helps manage all of their business requirements.</p>
 
+        <br><br>
+
+        <!-- ,"autoPlay":3000 -->
+        <div class="main-carousel"
+            data-flickity='{"groupCells": 1,"wrapAround": true,"pageDots": true,"autoPlay":3000 }'>
+            <div class="carousel-cell">
+                <div id="part1">
+                    <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/retail_shop.webp"
+                        width="192" height="127" />
+                </div>
+                <div id="part2">
+                    <p id="headingg">Retails Store's</p>
+                    <p id="headingg2">Vyapar billing and invoicing software helps retail businesses create professional
+                        customer
+                        invoices. It allows them to present their business information in the invoice. Further, it makes
+                        the process seamless for a retail buisness owner
+                        <br><br>
+                        The GST billing app helps small business owners keep track of all the inventory items. They can
+                        include their price, discounts, taxes, and others, to bill the customers faster. Another benefit
+                        is that they can create custom invoices. It helps them look professional. The business can
+                        include all payment options in the invoice for faster billing.
+
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="carousel-cell">
+                <div id="part1">
+                    <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/Supermarket.webp"
+                        width="192" height="127" />
+                </div>
+                <div id="part2">
+                    <p id="headingg">Supermarkets Chains</p>
+                    <p id="headingg2">Vyapar billing and invoicing software helps retail businesses create professional
+                        customer
+                        invoices. It allows them to present their business information in the invoice. Further, it makes
+                        the process seamless for a retail buisness owner
+                        <br><br>
+                        The GST billing app helps small business owners keep track of all the inventory items. They can
+                        include their price, discounts, taxes, and others, to bill the customers faster. Another benefit
+                        is that they can create custom invoices. It helps them look professional. The business can
+                        include all payment options in the invoice for faster billing.
+
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div id="part1">
+                    <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/Pharmacist-bro.webp"
+                        width="152" height="132" />
+                </div>
+                <div id="part2">
+                    <p id="headingg">Medical Shopes and farmacies</p>
+                    <p id="headingg2">Vyapar billing and invoicing software helps retail businesses create professional
+                        customer
+                        invoices. It allows them to present their business information in the invoice. Further, it makes
+                        the process seamless for a retail buisness owner
+                        <br><br>
+                        The GST billing app helps small business owners keep track of all the inventory items. They can
+                        include their price, discounts, taxes, and others, to bill the customers faster. Another benefit
+                        is that they can create custom invoices. It helps them look professional. The business can
+                        include all payment options in the invoice for faster billing.
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="carousel-cell">
+                <div id="part1">
+                    <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/business.webp"
+                        width="192" height="127" />
+                </div>
+                <div id="part2">
+                    <p id="headingg">Startups and SMEs</p>
+                    <p id="headingg2">Vyapar billing and invoicing software helps retail businesses create professional
+                        customer
+                        invoices. It allows them to present their business information in the invoice. Further, it makes
+                        the process seamless for a retail buisness owner
+                        <br><br>
+                        The GST billing app helps small business owners keep track of all the inventory items. They can
+                        include their price, discounts, taxes, and others, to bill the customers faster. Another benefit
+                        is that they can create custom invoices. It helps them look professional. The business can
+                        include all payment options in the invoice for faster billing.
+
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div id="part1">
+                    <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/construction-cuate.webp"
+                        width="192" height="122" />
+                </div>
+                <div id="part2">
+                    <p id="headingg">Constructions Business</p>
+                    <p id="headingg2">Vyapar billing and invoicing software helps retail businesses create professional
+                        customer
+                        invoices. It allows them to present their business information in the invoice. Further, it makes
+                        the process seamless for a retail buisness owner
+                        <br><br>
+                        The GST billing app helps small business owners keep track of all the inventory items. They can
+                        include their price, discounts, taxes, and others, to bill the customers faster. Another benefit
+                        is that they can create custom invoices. It helps them look professional. The business can
+                        include all payment options in the invoice for faster billing.
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="carousel-cell">
+                <div id="part1">
+                    <img src="https://vyaparwebsiteimages.vypcdn.in/marketing-images/images/home-page-revamp/fashion%20photoshoot-pana.webp"
+                        width="192" height="147" />
+                </div>
+                <div id="part2">
+                    <p id="headingg">Lifestyle and Fashions</p>
+                    <p id="headingg2">Vyapar billing and invoicing software helps retail businesses create professional
+                        customer
+                        invoices. It allows them to present their business information in the invoice. Further, it makes
+                        the process seamless for a retail buisness owner
+                        <br><br>
+                        The GST billing app helps small business owners keep track of all the inventory items. They can
+                        include their price, discounts, taxes, and others, to bill the customers faster. Another benefit
+                        is that they can create custom invoices. It helps them look professional. The business can
+                        include all payment options in the invoice for faster billing.
+
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id="acordioncontainers">
+        <h2>Frequently Asked Questions</h2>
+        <br><br>
+
+
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+
+
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" id="accordionbuttonheight" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                        aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" id="accordionbuttonheight" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                        aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                        this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" id="accordionbuttonheight" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                        aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>
@@ -1045,3 +1271,7 @@
     })
 
 </script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">   </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>

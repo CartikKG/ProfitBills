@@ -101,9 +101,9 @@ document.getElementById("maindiv").addEventListener("click", (e) => {
       number:no,
       productsData:productsData
     }
-
+    console.log(billDetail)
     postInvoice(billDetail);
-
+    
 
 
 
